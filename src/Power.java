@@ -52,8 +52,15 @@ public class Power {
 			damage += 50;
 			mana += 30;
 		}
+		System.out.println("Leveled UP ability: " +name);
+		System.out.println("Damage: " +damage);
+		System.out.println("Mana: " +mana);
 	}
 	
-	
+	public String toString(){
+		String str = "";
+		str = "Name: " +name +"\n" +"Damage: " +damage +"\n" +"Mana: " +mana; 
+		return str;
+	}
 	
 }
