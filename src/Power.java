@@ -32,6 +32,9 @@ public class Power {
 		return xp;
 	}
 	public void levelUp(){
+		if(abilityLearned==false){
+			abilityLearned = true;
+		}
 		if(abilityLevel==4){
 			System.out.println("Ability maxed out!");
 			return;
@@ -52,8 +55,15 @@ public class Power {
 			damage += 50;
 			mana += 30;
 		}
+		System.out.println("Leveled UP ability: " +name);
+		System.out.println("Damage: " +damage);
+		System.out.println("Mana: " +mana);
 	}
 	
-	
+	public String toString(){
+		String str = "";
+		str = "Name: " +name +"\n" +"Level: " +abilityLevel +"\n" +"Ability Learned: " +abilityLearned +"\n" +"Damage: " +damage +"\n" +"Mana: " +mana; 
+		return str;
+	}
 	
 }
